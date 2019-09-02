@@ -25,9 +25,7 @@ public class A1Adept {
 		double[] subtotals = new double[numberOfCustomers];
 		
 		for (int i=0; i < numberOfCustomers; i++) {
-			String name = scan.next() + " ";
-			name = name + scan.next();
-			customers[i] = name;
+			customers[i] = (scan.next() + " " + scan.next());
 			
 			int purchased = scan.nextInt();
 			double charge = 0;
@@ -52,26 +50,23 @@ public class A1Adept {
 		int indexSmallest = 0;
 		double biggest = subtotals[0];
 		double smallest = subtotals[0];
-		double totalSpent = 0;
 		
-		for (int i = 1; i < subtotals.length; i++) {
-			if (biggest < subtotals[i]) {
+		for (int i = 0; i < subtotals.length; i++) {
+			if (subtotals[i] > biggest) {
 				biggest = subtotals[i];
 				indexBiggest = i;
 			}
-		}
-		for (int i = 1; i < subtotals.length; i++) {
-			if (smallest > subtotals[i]) {
+			if (subtotals[i] < smallest) {
 				smallest = subtotals[i];
 				indexSmallest = i;
 			}
 		}
-		for (int i = 0; i < subtotals.length; i++) {
-			totalSpent = totalSpent + subtotals[i];
-		}
-		double average = 0;
-		average = totalSpent / subtotals.length;
 		
+		double average = 0;
+		for (int i = 0; i < subtotals.length; i++) {
+			average = average + subtotals[i];
+		}
+		average = average /subtotals.length;
 		
 		System.out.println("Biggest: " + customers[indexBiggest] + " (" + String.format("%.2f", subtotals[indexBiggest]) + ")");
 		System.out.println("Smallest: " + customers[indexSmallest] + " (" + String.format("%.2f", subtotals[indexSmallest]) + ")");
