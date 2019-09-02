@@ -9,14 +9,19 @@ public class A1Adept {
 		Scanner scan = new Scanner(System.in);
 
 		// Your code follows here.
+		
+		
+		
 		int numberOfItems = scan.nextInt();
 		
 		String[] items = new String[numberOfItems];
+		
 		double[] prices = new double[numberOfItems];
+		
 		
 		for (int i=0; i < numberOfItems; i++) {
 			items[i] = scan.next();
-			prices[i] = scan.nextInt();
+			prices[i] = scan.nextDouble();
 		}
 		
 		int numberOfCustomers = scan.nextInt();
