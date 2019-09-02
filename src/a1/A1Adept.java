@@ -73,8 +73,8 @@ public class A1Adept {
 		average = totalSpent / subtotals.length;
 		
 		
-		System.out.println("Biggest: " + customers[indexBiggest] + "(" + String.format("%.2f", subtotals[indexBiggest]) + ")");
-		System.out.println("Smallest: " + customers[indexSmallest] + "(" + String.format("%.2f", subtotals[indexSmallest]) + ")");
+		System.out.println("Biggest: " + customers[indexBiggest] + " (" + String.format("%.2f", subtotals[indexBiggest]) + ")");
+		System.out.println("Smallest: " + customers[indexSmallest] + " (" + String.format("%.2f", subtotals[indexSmallest]) + ")");
 		System.out.println("Average: " + String.format("%.2f", average));
 		}
 
